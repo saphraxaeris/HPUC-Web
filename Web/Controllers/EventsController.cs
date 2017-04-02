@@ -10,7 +10,10 @@ namespace Web.Controllers
     {
         public ActionResult Index()
         {
-            return View ();
+			var events = EventManager.getEvents();
+			if (events == null)
+				events = new Event[] { };
+			return View (events);
         }
     }
 }

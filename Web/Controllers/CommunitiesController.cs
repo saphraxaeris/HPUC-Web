@@ -10,7 +10,18 @@ namespace Web.Controllers
     {
         public ActionResult Index()
         {
-            return View ();
+			var communities = CommunityManager.getCommunities();
+			if (communities == null)
+				communities = new Community[] { };
+			return View(communities);
         }
+
+		public ActionResult Profile(string id)
+		{
+			var community = CommunityManager.getCommunity(id);
+			if (community == null)
+				community = new Community();
+			return View(community);
+		}
     }
 }

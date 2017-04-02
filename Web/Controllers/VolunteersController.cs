@@ -10,7 +10,10 @@ namespace Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+			var volunteers = VolunteerManager.getVolunteers();
+			if (volunteers == null)
+				volunteers = new Volunteer[] { };
+            return View(volunteers);
         }
     }
 }

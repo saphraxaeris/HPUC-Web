@@ -70,7 +70,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +83,8 @@
     <Folder Include="Views\Communities\" />
     <Folder Include="Views\Events\" />
     <Folder Include="Views\Profile\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Managers\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\HomeController.cs" />
@@ -95,6 +97,19 @@
     <Compile Include="Controllers\CommunitiesController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="General.cs" />
+    <Compile Include="Entities\Community.cs" />
+    <Compile Include="Entities\Volunteer.cs" />
+    <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\Coor.cs" />
+    <Compile Include="Entities\Badges.cs" />
+    <Compile Include="Managers\EventManager.cs" />
+    <Compile Include="Managers\VolunteerManager.cs" />
+    <Compile Include="Managers\CommunityManager.cs" />
+    <Compile Include="Entities\RegisterParams.cs" />
+    <Compile Include="Managers\ProfileManager.cs" />
+    <Compile Include="Entities\LoginParams.cs" />
+    <Compile Include="Entities\Id.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -131,6 +146,10 @@
     <Content Include="Views\Events\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Scripts\navigation.js" />
+    <Content Include="Views\Profile\Register.cshtml" />
+    <Content Include="Views\Profile\Login.cshtml" />
+    <Content Include="Views\Communities\Profile.cshtml" />
+    <Content Include="Assets\tcivitaslogo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\materialize\fonts\roboto\Roboto-Bold.woff2" />
