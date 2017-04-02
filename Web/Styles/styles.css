@@ -1,1 +1,21 @@
-﻿
+﻿.brand-logo {
+	margin-left: 15px;
+}
+
+#sidenav-overlay {
+	z-index: 1 !important;
+}
+
+.side-nav li > a.btn {
+	color: #000;
+    background-color: #fff;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    box-shadow: none;
+}
+
+.profile-pic {
+	height:100%;
+	width:auto;
+	padding: 5px;
+}
